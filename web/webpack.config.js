@@ -5,6 +5,8 @@ const url = require('url')
 const publicPath = ''
 const envConfig = require('./env')
 const env = process.env.ENV || 'dev';
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const path = require('path')
 
 module.exports = (options = {}) => ({
   entry: {
@@ -52,6 +54,11 @@ module.exports = (options = {}) => ({
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
+    }),
+    new CleanWebpackPlugin(['dist'], {
+      root: path.resolve(__dirname, './'),
+      verbose: true,
+      dry: false
     })
   ],
   resolve: {

@@ -13,7 +13,9 @@ let prepareEnv = async function (jobData) {
 }
 
 let runJob = async function (jobData, io) {
+    console.log("jobData==============================", jobData)
     let jobFolderPath = await prepareEnv(jobData);
+    console.log("jobFolderPath=========================", jobFolderPath)
     let result;
     try {
         result = await runPuppeteer(jobData, jobFolderPath, io);

@@ -1,3 +1,3 @@
 module.exports = {
-    DBURL: 'localhost/puppetry'
+    DBURL: 'localhost'
 }

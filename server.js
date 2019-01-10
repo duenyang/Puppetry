@@ -216,8 +216,8 @@ router
                 }
                 let defaultConfig = {
                     "checkPageError": true,
-                    "height": 736,
-                    "width": 414,
+                    "height": '',
+                    "width": '',
                     "isOpenNewWindow": false,
                     "isRunChromeAction": true,
                     "checkPageSpeed": false,

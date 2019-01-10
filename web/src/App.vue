@@ -2,7 +2,6 @@
   <div class="root">
     <div class="article-wrap">
       <div class="title-logo">
-        <span class="">P</span>uppe<span class="strong">try</span>
       </div>
       <router-view></router-view>
     </div>

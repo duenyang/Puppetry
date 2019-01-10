@@ -28,6 +28,7 @@ async function prepareBrowser(jobId) {
     } else {
         browser = await puppeteer.launch({
             slowMo: 200,
+            headless: false,
             args: ['--no-sandbox']
         });
         page = await browser.newPage();
@@ -212,6 +213,7 @@ let runPuppeteer = async function (jobData, jobFolderPath, io) {
                 case 'puppeteer-page':
                     let actionType = data.actionType;
                     let isStringParam = false;
+                    console.log(data.actionParams)
                     let actionParams = data.actionParams.map(param => {
                         let result;
                         let isArrParam = param.startsWith('[') && param.endsWith(']');
